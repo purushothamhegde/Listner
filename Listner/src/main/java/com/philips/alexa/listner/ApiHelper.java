@@ -46,7 +46,7 @@ public class ApiHelper {
 		else if (arrOfStr[0].equals("SFDC")) {
 			sUrl= sUrl +"/sfdc/contact";
 			sRes= request(sUrl);
-			speechresponse= GetSpeechResponse("MDM", sRes);
+			speechresponse= GetSpeechResponse("SFDC", sRes);
 			
 		}
 		
@@ -90,6 +90,9 @@ public class ApiHelper {
 				
 				
 				sSpeechResponse= mysfdcrec[0].getColumns().toString();
+				
+				System.out.println(sSpeechResponse);
+				
 			} catch (JsonParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
