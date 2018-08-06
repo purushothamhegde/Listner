@@ -1,19 +1,29 @@
 package com.philips.alexa.response.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SFDCResponse {
 	
+	@JsonProperty("id")
 	private String id;
 
+	@JsonProperty("done")
     private String done;
 
+	@JsonProperty("developerName")
     private String developerName;
 
-    private SFDCColumns[] columns;
+	
+	@JsonProperty("columns")
+    private Columns[] columns;
 
+    @JsonProperty("label")
     private String label;
+    
+    @JsonProperty("records")
+    private Records[] records;
 
-    private SFDCRecords[] records;
-
+    @JsonProperty("size")
     private String size;
 
     public String getId ()
@@ -46,12 +56,12 @@ public class SFDCResponse {
         this.developerName = developerName;
     }
 
-    public SFDCColumns[] getColumns ()
+    public Columns[] getColumns ()
     {
         return columns;
     }
 
-    public void setColumns (SFDCColumns[] columns)
+    public void setColumns (Columns[] columns)
     {
         this.columns = columns;
     }
@@ -66,12 +76,12 @@ public class SFDCResponse {
         this.label = label;
     }
 
-    public SFDCRecords[] getRecords ()
+    public Records[] getRecords ()
     {
         return records;
     }
 
-    public void setRecords (SFDCRecords[] records)
+    public void setRecords (Records[] records)
     {
         this.records = records;
     }

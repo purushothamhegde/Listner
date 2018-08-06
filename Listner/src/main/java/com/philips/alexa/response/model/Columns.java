@@ -1,28 +1,56 @@
 package com.philips.alexa.response.model;
 
-public class SFDCColumns 
-{
-    private String sortIndex;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Columns 
+{
+	@JsonProperty("sortIndex")
+	private String sortIndex;
+
+	@JsonProperty("fieldNameOrPath")
     private String fieldNameOrPath;
 
+	@JsonProperty("ascendingLabel")
     private String ascendingLabel;
 
+	@JsonProperty("hidden")
     private String hidden;
 
+	@JsonProperty("sortable")
     private String sortable;
 
+	@JsonProperty("label")
     private String label;
 
+	@JsonProperty("sortDirection")
     private String sortDirection;
 
+	@JsonProperty("type")
     private String type;
 
+	@JsonProperty("selectListItem")
     private String selectListItem;
 
+	@JsonProperty("descendingLabel")
     private String descendingLabel;
 
-    public String getSortIndex ()
+	
+	@JsonProperty("value")
+    private String value1;
+
+	
+	
+	
+	
+    public String getValue1() {
+		return value1;
+	}
+
+	public void setValue1(String value1) {
+		this.value1 = value1;
+	}
+
+	public String getSortIndex ()
     {
         return sortIndex;
     }
